@@ -6,7 +6,7 @@
 body {
   font-family:'Open Sans', sans-serif;
   background-color: #FFFFF0;
-  cursor: none;
+  cursor:none;
 }
 
 header{
@@ -14,66 +14,6 @@ header{
   background-color: #4c5769;
   padding: 0;
   margin: 0;
-}
-
-/* mouse cursor effect */
-.cursor {
-    width: 20px;
-    height: 20px;
-    border: 1px solid blue;
-    border-radius: 50%;
-    position: absolute;
-    animation: cursorAnim .5s infinite alternate;
-    pointer-events: none;
-}
-
-.cursor::after {
-    content: "";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    border: 8px solid gray;
-    border-radius: 50%;
-    opacity: .5;
-    top: -9px;
-    left: -9px;
-    animation: cursorAnim2 .5s infinite alternate;
-}
-
-@keyframes cursorAnim {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(.7);
-    }
-}
-
-@keyframes cursorAnim2 {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(.4);
-    }
-}
-
-@keyframes cursorAnim3 {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(3);
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
-}
-
-.expand {
-    animation: cursorAnim3 .5s forwards;
-    border: 1px solid red;
 }
 
 /* firstpart */
@@ -129,36 +69,6 @@ nav h1{
   width: 45%;
 }
 
-
-/* self portrait */
-.biocontext{
-    border: 1px solid red;
-    width: 60%;
-    margin: 0 auto;
-    display: flex;
-}
-
-.biocontext-img{
-    border: 1px solid black;
-    flex-wrap: wrap;
-    width:60%;
-}
-.biocontext-img img{
-    width: 100%;
-    margin:1rem auto;
-}
-.biocontext-word{
-    border: 1px solid yellow;
-    flex-wrap: wrap;
-    width:40%;
-}
-.biocontext-word p{
-    border: 1px solid red;
-    line-height: 2.5rem;
-    width: 90%;
-    text-align: left;
-    margin: 1rem auto;
-}
 @keyframes mymovement{
   0%{
     transform: translate(0,0px);
@@ -233,6 +143,65 @@ nav h1{
 }
 .element {
   padding-bottom: 2rem;
+}
+/* mouse cursor effect */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid blue;
+    border-radius: 50%;
+    position: absolute;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -9px;
+    left: -9px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
 }
 
 h2 {
@@ -313,6 +282,9 @@ code {
 /* 
   TEXT ELEMENTS -------------------
 */
+#project{
+    margin-top:4rem;
+}
 #project a{
   text-decoration: none;
   border: none;
@@ -345,16 +317,25 @@ code {
   margin: 1rem auto;
   text-align: left;
 }
-
+.box{
+    width: 80%;
+}
 .projectImage img{
-  width: 80%;
+  width: 100%;
+  transition:1s;
 }
 
 .projectImage{
   flex-wrap: wrap;
   width: 50%;
 }
-
+.box{
+    overflow: hidden;
+}
+.projectImage img:hover {
+    transform: scale(1.1);
+    opacity: .9;
+}
 
 /* 
   COMBINED ELEMENTS -------------------
@@ -489,38 +470,49 @@ nav {
     display: block;
   }
   .bio .name {
-    width: 90%;
-    margin:1rem auto;
+
+  width: 90%;
+  margin:1rem auto;
+}
+.bio .name .imgholder  h1{
+  font-size: 5rem;
+}
+.bio .name .imgholder {
+  width: 90%;
+  margin: 1rem auto;
 }
 
 .bio .personalpic {
     width: 100%;
 }
-  .bio .personalpic .imgholder {
-    width: 90%;
+.bio .personalpic .imgholder {
+    width: 100%;
     margin: 1rem auto;
     margin-top: 2rem;
     z-index: -1;
 }
+
 .divider{
     width: 90%;
 }
-.biocontext{
-    width: 90%;
+.projectDetail {
     display: block;
+    width: 90%;
+    margin:.5rem auto;
 }
-.biocontext-img {
+.projectIntroduction {
     width: 100%;
 }
-.biocontext-img img {
-
-    margin:0;
-}
-.biocontext-word {
+.projectIntroduction p {
     width: 100%;
 }
-.biocontext-word p{
-    margin:0;
+.box{
+    width: 100%;
+}
+.projectImage {
+    width: 100%;
+}
+.projectImage img {
     width: 100%;
 }
 }
