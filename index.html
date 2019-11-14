@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./main.css" />
     <script src="https://kit.fontawesome.com/4587e24ad3.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
   </head>
@@ -18,12 +18,12 @@
         </div>
       </div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="project.html">Projects</a></li>
       </ul>
     </nav>
-
+    <div class="cursor"></div>
     <div class="bio">
       <div class="name">
         <div class="imgholder">
@@ -42,38 +42,18 @@
 
     </div>
 
-    <div class="divider">
+    <!-- <div class="divider">
       <div class="divider-line"></div>
       <div class="divider-icon">
           <i class="fas fa-gamepad"></i>
       </div>
       <div class="divider-line"></div>
-    </div>
-
-
-    <!-- INTERACTIVE ELEMENTS SECTION // -->
+    </div> -->
     <section id="interactive_elements">
-      <div id="about">
-          <h2>Font</h2>
-      </div>
-      <div class="divider">
-          <div class="divider-line"></div>
-          <div class="divider-icon">
-              <i class="fas fa-gamepad"></i>
-          </div>
-          <div class="divider-line"></div>
-        </div>
-      <section class="element section-1">
-        <h3>Heading Font: Druk Text Wide</h3>
-        <p>Text Font: Open Sans</p>
-        <h3>In-text link</h3>
-        <p><a href="https://iat313group18.wixsite.com/themaid" class="intextlink">Project One</a> :Interactive Web Game: The Maid</p>
-      </section>
 
-      <!-- Default Button styling section -->
-      <section class="element">
+    <section class="element mybio">
 
-        <h2>Color Plattern</h2>
+        <h2>Personal Bio</h2>
         <div class="divider">
             <div class="divider-line"></div>
             <div class="divider-icon">
@@ -81,81 +61,25 @@
             </div>
             <div class="divider-line"></div>
           </div>
-        <img src="img/colorpattern.png">
+
+          <div class="biocontext">
+              <div class="biocontext-img">
+                  <img src="img/myself.jpg" alt="self portrait">
+              </div>
+
+              <div class="biocontext-word">
+                 <p>Ethan Zhu is a fourth year IAT (Interactive with Arts and Technology) student from Simon Fraser University. Currently 
+                    my major focus is game design and game mechanism design. By investigating interactive design and game principle research,
+                    now I am very familar with all these relative knowledge and skills.
+                 </p>
+              </div>
+
+          </div>
+      </section>
+      
       </section>
 
-      <section class="element mybio">
-
-          <h2>Personal Bio</h2>
-          <div class="divider">
-              <div class="divider-line"></div>
-              <div class="divider-icon">
-                  <i class="fas fa-gamepad"></i>
-              </div>
-              <div class="divider-line"></div>
-            </div>
-            <p>Ethan Zhu is a fourth year IAT (Interactive with Arts and Technology) student from Simon Fraser University. Currently 
-              my major focus is game design and game mechanism design.
-            </p>
-        </section>
-
-        <section class="element" id="project">
-
-            <h2>Projects</h2>
-            <div class="divider">
-                <div class="divider-line"></div>
-                <div class="divider-icon">
-                    <i class="fas fa-gamepad"></i>
-                </div>
-                <div class="divider-line"></div>
-              </div>
-              <div class="projectDetail">
-              <div class="projectIntroduction">
-              <h3>Interactive Web Game:<a href="https://iat313group18.wixsite.com/themaid">The Maid</a></h3>
-              <p>
-                The Maid is a web based interactive game. Player will explore the story from the perspective of "Doris". 
-                During the process of the game, player can interact with the elements appear on the screen and try to collect 
-                information and clue to progress the story forward.
-
-
-              </p>
-              </div>
-              <div class="projectImage">
-              <img src="img/TheMaid.png">
-              </div>
-              </div>
-
-              <br>
-              <div class="projectDetail">
-                  <div class="projectImage">
-                      <img src="img/antlion_2.gif" alt="animated" />
-                      <img src="img/antlion_3.gif" alt="animated" />
-                      </div>
-                <div class="projectIntroduction">
-              <h3>Digital 2D Shooting Game: <a href="https://calebtaylor.ca/games/AntLion/AntLion.html?fbclid=IwAR0AQTBhKj9U5ClYxRLy3TSfRwy8rR1sICETOuLt6cLeW-CvDKMgFc1qBw8">Ant Lion</a></h3>
-              <p>Ant Lion is a digital 2D shooting game. The player will act as an ant during the game, try to enhance their weapon
-                during their adventure and finally beat the boss: the ant lion. I was taking charge of the game principles and art work 
-                design in this proejct.
-              </p>
-              </div>
-              
-              </div>
-          </section>
-    </section>
-
-    
-    <!-- // INTERACTIVE ELEMENTS SECTION -->
-
-
-    
-
-    </section>
-    <!-- // TEXT ELEMENTS SECTION -->
-
-    </section>
-    <!-- // COMBINED ELEMENTS SECTION -->
-
-
+ 
     <script src="app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -163,6 +87,8 @@
 $("#wrapper").click( function() {
 	$(".icon").toggleClass("close");
 });
+
+
 </script>
 
   </body>

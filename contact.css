@@ -1,0 +1,579 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family:'Open Sans', sans-serif;
+  background-color: #FFFFF0;
+  cursor: none;
+}
+
+header{
+  text-align: center;
+  background-color: #4c5769;
+  padding: 0;
+  margin: 0;
+}
+
+/* mouse cursor effect */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid blue;
+    border-radius: 50%;
+    position: absolute;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -9px;
+    left: -9px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
+
+/* firstpart */
+nav h1{
+  display: inline-block;
+}
+.bio{
+  width: 100%;
+  display: flex;
+  margin-top: 10%;
+}
+.bio .name{
+  flex-wrap: wrap;
+  width: 50%;
+
+}
+.mybio{
+    margin-top: 10rem;
+}
+.mybio p{
+  margin:2rem auto;
+  width: 50%;
+}
+.bio .name h1{
+  font-size: 6rem;
+  font-family: "Druk Text Wide", sans-serif;
+  font-weight: 500;
+  color: transparent;
+  -webkit-text-stroke: 1px #5b78c7;
+}
+.bio .name .imgholder{
+  width: 75%;
+  margin: 1rem auto;
+}
+.bio .name p{
+  color: #5b78c7;
+  margin-left: .5rem;
+}
+
+.bio .personalpic{
+  flex-wrap: wrap;
+  width: 50%;
+  z-index: -1;
+}
+.bio .personalpic .imgholder{
+  width: 75%;
+
+  margin: 1rem auto;
+  margin-top:2rem;
+}
+.bio .personalpic .imgholder img:first-child{
+  animation-name: mymovement;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  width: 45%;
+
+}
+/* container */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+}
+.col{
+    width: 30%;
+}
+.col:nth-child(2){
+    margin-left: 3.3%;
+}
+.col:last-child{
+    margin-left: 3.3%;
+}
+.card {
+    height: 200px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.cardbody{
+    margin-top:10%;
+}
+
+
+/* self portrait */
+.biocontext{
+    border: 1px solid red;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.biocontext-img{
+    border: 1px solid black;
+    flex-wrap: wrap;
+    width:60%;
+}
+.biocontext-img img{
+    width: 100%;
+    margin:1rem auto;
+}
+.biocontext-word{
+    border: 1px solid yellow;
+    flex-wrap: wrap;
+    width:40%;
+}
+.biocontext-word p{
+    border: 1px solid red;
+    line-height: 2.5rem;
+    width: 90%;
+    text-align: left;
+    margin: 1rem auto;
+}
+@keyframes mymovement{
+  0%{
+    transform: translate(0,0px);
+  }
+
+  50%{
+    transform: translate(0,-20px);
+  }
+
+  100%{
+    transform: translate(0,0px);
+  }
+}
+
+@keyframes mymovement_2{
+  0%{
+    transform: translate(0,0px);
+  }
+
+  50%{
+    transform: translate(0,20px);
+  }
+
+  100%{
+    transform: translate(0,0px);
+  }
+}
+.bio .personalpic .imgholder img:last-child{
+
+  margin-left: 2rem;
+  animation-name: mymovement_2;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  width: 40%;
+}
+.divider{
+  display: flex;
+  margin: 2rem auto;
+  margin-top: 10rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider-line{
+  background-color:#5b78c7;
+}
+
+.divider-line:first-child{
+  margin-right: 1rem;
+}
+
+.divider-line:last-child{
+  margin-left: 1rem;
+}
+.divider-icon{
+  font-size: 5rem;
+  color:#5b78c7;
+}
+.divider-line{
+  width: 100%;
+  max-width: 15rem;
+  height: .25rem;
+  border-radius: 1rem;
+}
+#interactive_elements{
+  text-align: center;
+}
+#interactive_elements .divider{
+  margin-top:0;
+}
+.element {
+  padding-bottom: 2rem;
+}
+
+h2 {
+  margin-top: 6rem;
+}
+
+h3 {
+
+  margin-top: 1rem;
+}
+
+h4 {
+  margin-bottom: 0.25rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+nav a:hover, nav a:focus {
+  text-decoration: none;
+}
+
+code {
+  background-color: #EEE;
+  padding: 0.5rem;
+  display: block;
+}
+/* section-1 styling */
+.section-1{
+  text-align: center;
+}
+
+.section-1 h3{
+  font-family: "Druk Text Wide", sans-serif;
+}
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+/* intextlink css */
+.intextlink{
+  text-decoration: none;
+}
+.intextlink:hover{
+  border-bottom: 1px solid red;
+}
+/* Styling for the navigation button */
+.button-nav {
+  display: inline-block;
+  padding: 0.5rem;
+  color: white;
+  background-color: rgb(50,50,50);
+  text-decoration: none;
+  transition-property: background-color; 
+  transition-duration: 0.5s;
+}
+
+.button-nav:hover, .button-nav:focus {
+  background-color: rgb(200,200,200);
+}
+
+#about h2{
+  font-size: 3rem;
+  font-family: "Druk Text Wide", sans-serif;
+  font-weight: 500;
+  color: transparent;
+  -webkit-text-stroke: 1px #5b78c7;
+}
+
+.element h2{
+  font-size: 3rem;
+  font-family: "Druk Text Wide", sans-serif;
+  font-weight: 500;
+  color: transparent;
+  -webkit-text-stroke: 1px #5b78c7;
+}
+
+/* 
+  TEXT ELEMENTS -------------------
+*/
+#project a{
+  text-decoration: none;
+  border: none;
+  transition: 1s;
+}
+
+#project a:hover{
+  color: white;
+  background-color: #5b78c7;
+}
+
+/* projectdetail */
+.projectDetail{
+  display: flex;
+  width: 100%;
+}
+.projectDetail:last-child{
+  margin-top: 5rem;
+}
+.projectDetail:last-child img{
+  width: 25%;
+}
+.projectIntroduction{
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.projectIntroduction p{
+  width: 60%;
+  margin: 1rem auto;
+  text-align: left;
+}
+
+.projectImage img{
+  width: 80%;
+}
+
+.projectImage{
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+
+/* 
+  COMBINED ELEMENTS -------------------
+*/
+
+nav {
+  height: 10vh;
+  background: #5b78c7;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.landing {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing h1 {
+  margin: 100px;
+  font-size: 50px;
+  color: #ae5fce;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    
+  }
+
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    border-radius:8px;
+  	transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+  }
+
+  .middle {
+    margin-top:5px;
+  }
+  .bottom {
+    margin-top:5px;
+  }
+  .icon.close .top {
+    transform:rotate(45deg);
+  }
+  .icon.close .middle{
+    margin-top:-3px;
+    transform:rotate(-45deg);
+
+  }
+
+  .icon.close .bottom{
+    margin-top:-3px;
+    transform:rotate(-45deg);
+
+
+  }
+
+  .nav-links {
+    position: fixed;
+    background: #5b78c7;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1300px at 90% -10%);
+    pointer-events: all;
+
+  }
+  .landing {
+    flex-direction: column;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li a {
+    font-size: 25px;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .nav-links {   
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+  }
+
+  .bio{
+    display: block;
+  }
+  .bio .name {
+      border:1px solid red;
+    width: 90%;
+    margin:1rem auto;
+}
+.bio .name .imgholder  h1{
+    font-size: 5rem;
+}
+.bio .name .imgholder {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.bio .personalpic {
+    width: 100%;
+}
+  .bio .personalpic .imgholder {
+    width: 100%;
+    margin: 1rem auto;
+    margin-top: 2rem;
+    z-index: -1;
+}
+.divider{
+    width: 90%;
+}
+.row{
+    display: block;
+    width: 90%;
+}
+.col {
+    width: 100%;
+}
+.col:nth-child(2){
+    margin-left: 0;
+    margin-top: 1rem;
+}
+.col:last-child{
+    margin-left: 0;
+    margin-top: 1rem;
+}
+}
+
