@@ -304,21 +304,20 @@ code {
 .projectDetail:last-child{
   margin-top: 5rem;
 }
-.projectDetail:last-child img{
-  width: 25%;
-}
+
 .projectIntroduction{
   flex-wrap: wrap;
   width: 50%;
 }
 
 .projectIntroduction p{
-  width: 60%;
-  margin: 1rem auto;
+  width: 80%;
+  margin: 2rem auto;
   text-align: left;
 }
 .box{
     width: 80%;
+    margin: 2rem auto;
 }
 .projectImage img{
   width: 100%;
@@ -464,14 +463,15 @@ nav {
   .nav-links {   
     clip-path: circle(100px at 90% -20%);
     -webkit-clip-path: circle(100px at 90% -20%);
+    z-index: 1;
   }
-
   .bio{
     display: block;
+
   }
   .bio .name {
-
-  width: 90%;
+  border: 1px solid red;
+  width: 100%;
   margin:1rem auto;
 }
 .bio .name .imgholder  h1{
@@ -483,6 +483,7 @@ nav {
 }
 
 .bio .personalpic {
+  border: 1px solid red;
     width: 100%;
 }
 .bio .personalpic .imgholder {
