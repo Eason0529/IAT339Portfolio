@@ -1,0 +1,712 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    cursor:none;
+}
+a:hover{
+    cursor: none;
+}
+/* mouse cursor effect */
+.cursor {
+    z-index: 9999;
+    width: 20px;
+    height: 20px;
+    border: 1px solid blue;
+    border-radius: 50%;
+    position: absolute;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -9px;
+    left: -9px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
+
+h1{
+        font-family: "Druk Text Wide", sans-serif;
+        color: white;
+}
+
+.s1{
+    background: url('../img/firstpage.png');
+    background-size:cover;
+    background-position: center;
+
+    h1{
+        font-family: "Druk Text Wide", sans-serif;
+        font-size: 5em;
+        color: transparent;
+        -webkit-text-stroke:1px #FFF;
+        text-align: center;
+    }
+    .s1contentone{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    .mytitle{
+        width: 80%;
+        margin: 1em auto;
+    }
+    .parallaximgone{
+
+        margin-left: 80%;
+        margin-top: 30%;
+    }
+    .parallaximgone:hover{
+        transform: scale(1.4);
+        transition: .8s; 
+    }
+    .parallaximgtwo:hover{
+        transform: scale(1.4);
+        transition: .8s;
+    }
+
+    .parallaximgtwo{
+        margin-left: 20%;
+
+    }
+    .s1contentone p{
+        color: white;
+        text-align: center;
+    }
+
+}
+
+
+
+.s2{
+    background: url('../img/secondpagebackground.png');
+    background-size:cover;
+    background-position: center;
+    h1{
+        font-family:  "Druk Text Wide", sans-serif;
+        font-size: 5em;
+        color:#5b78c7;
+        padding-top: 5rem;
+        text-align: center;
+    }
+    
+
+    .s2contentone{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    .aboutme{
+        display: flex;
+        position: absolute;
+        width: 100%;
+        top: 20vh;
+        margin-top: 2rem;
+        left: 0;
+        overflow: hidden;
+    }
+
+    .selfimg{
+        width: 50%;
+
+    }
+    .selfimg .imgbox{
+        width: 80%;
+        height: 100%;
+        margin: 2rem auto;
+
+    }
+    .imgbox img{
+        width: 100%;
+   
+    }
+
+    .bio{
+        width:50%;
+    }
+
+    .bio p{
+        width: 80%;
+        color: #5b78c7;
+        font-size: 1.5em;
+        line-height: 2em;
+        margin: 2rem auto;
+    }
+}
+
+.s3{
+    background: url('../img/thirdpagebackground.png');
+    background-size:cover;
+    background-position: center;
+
+    .s3content{
+        width: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        overflow: hidden;
+    }
+    .s3contentone{
+        width: 100%;
+        
+    }
+    .s3contentone h1{
+        font-family: "Druk Text Wide", sans-serif;
+        font-size: 5em;
+        //padding-top: 1rem;
+        color: transparent;
+        -webkit-text-stroke:1px #FFF;
+        text-align: center;
+    }
+    
+    .s3contenttwo{
+        margin-top: 2rem;
+        width: 60%;
+    }
+
+    .s3contenttwo .projectone{
+        width: 80%;
+        display: flex;
+        margin: 1em auto;
+        margin-top: 2rem;
+
+
+    }
+    .videowidth{
+        width: 80%;
+        margin: 1em auto;
+        z-index: 3;
+    }
+
+    video{
+        width:100%;
+    }
+    .s3contenttwo .projecttwo{
+        display: flex;
+        width: 100%;
+        
+
+    }
+
+  
+    .projectone .imgcontainer{
+        width: 50%;
+
+    }
+
+    .projectone .imgcontainer .sizebox{
+        overflow: hidden;
+
+    }
+    .projectone .imgcontainer .sizebox img{
+        opacity: .9;
+    }
+
+    .projectone .imgcontainer .sizebox img:hover{
+        transition: 1.5s;
+        transform: scale(1.3);
+        opacity: 1;
+    }
+
+
+    .projectcontenttwo .sizebox{
+        width: 80%;
+
+        margin: 1em auto;
+    }
+    .projectcontenttwo .sizebox p{
+        color: white;
+        font-size: 1.2em;
+        // line-height: 1.2em;
+    }
+    .projectone .projectcontentone p{
+        color: white;
+        width: 100%;
+
+        margin: 1em auto;
+
+        font-size: 1.2em;
+    }
+
+    .projectone .projectcontentone{
+        width: 50%;
+    }
+
+
+}
+
+
+.s4{
+    background: url('../img/thirdpagebackground.png');
+    background-size:cover;
+    background-position: center;
+    .s4content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .s4contentone h1{
+        font-family: "Druk Text Wide", sans-serif;
+        font-size: 5em;
+        color: transparent;
+        -webkit-text-stroke:1px #FFF;
+        text-align: center;
+    }
+    .s4contenttwo{
+        margin-top: 2rem;
+        width: 55%;
+    }
+
+
+    .s4contenttwo .project .projecttwo{
+        width: 80%;
+        display: flex;
+        margin: 1em auto;
+        margin-top: 5rem;
+        //border: 1px solid black;
+    }
+
+
+    .projecttwo .imgcontainer{
+        width: 50%;
+        //border: 1px solid red;
+    }
+
+    .projecttwo .projectcontenttwo{
+        width: 50%;
+    }
+
+    .projecttwo .projectcontenttwo p{
+        margin-left: 1em;
+        color: white;
+        font-size: 1.2em;
+        //border: 1px solid black;
+    }
+
+
+    .projecttwo .imgcontainer img{
+        opacity: .9;
+        width: 100%;
+    }
+    .projecttwo .imgcontainer .sizebox{
+        overflow: hidden;
+
+    }
+
+    .projecttwo .imgcontainer .sizebox img:hover{
+        transition: 1.5s;
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+
+    .videowidth{
+        width: 80%;
+        margin: 1em auto;
+        z-index: 3;
+    }
+
+    video{
+        width:100%;
+    }
+}
+.s5{
+    background: url('../img/contact_me.png');
+    background-size:cover;
+    background-position: center;
+
+    .s5content{
+        position: absolute;
+        width: 100%;
+        top:0;
+        left: 0;
+        overflow: hidden;
+    }
+    .s5content .contactme{
+        display: flex;
+        width: 90%;
+        margin: 1em auto;
+        margin-top: 15rem; 
+        
+    }
+    h1{
+        color: white;
+    }
+
+    .s5contentone{
+        width: 50%;
+        //border: 1px solid white;
+    }
+    .s5contenttwo{
+        width: 50%;
+       //border: 1px solid white;
+    }
+
+    .s5contentone .imgcontainer{
+        display: flex;
+        width: 80%;
+        margin:1em auto;
+        margin-top: 20%;
+        //border: 1px solid red;
+    }
+
+    .s5contentone #imgone{
+        width: 40%;
+        margin:1em auto;
+    }
+
+    .s5contentone #imgtwo{
+        width: 40%;
+        margin:1em auto;
+    }
+
+    .s5content .s5contenttwo .contactinfo{
+        width: 80%;
+        margin:1em auto;
+        margin-top: 20%;
+        //border: 1px solid red;
+    }
+
+    .s5content .s5contenttwo .contactinfo h1{
+        width: 80%;
+        margin:1em auto;
+        color: white;
+        font-size: 2em;
+        line-height: 2em;
+    }
+    .s5content .s5contenttwo .contactinfo h2{
+        width: 80%;
+        margin:1em auto;
+        color: white;
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+    .s5contentone .imgcontainer img:first-child{
+        animation-name: mymovement;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+    }
+    .s5contentone .imgcontainer img:last-child{
+        animation-name: mymovement_2;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes mymovement{
+        0%{
+          transform: translate(0,0px);
+        }
+      
+        50%{
+          transform: translate(0,-20px);
+        }
+      
+        100%{
+          transform: translate(0,0px);
+        }
+      }
+      
+      @keyframes mymovement_2{
+        0%{
+          transform: translate(0,0px);
+        }
+      
+        50%{
+          transform: translate(0,20px);
+        }
+      
+        100%{
+          transform: translate(0,0px);
+        }
+      }
+}
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+    width: 12px;
+    height: 12px;
+    margin: -6px 0 0 -6px;
+    background: transparent;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 2px grey;
+    overflow: hidden;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0;
+      border-radius: 50%;
+      left: 0;
+      bottom: 0;
+      background-color: grey;
+      box-shadow: 0 0 1px grey;
+      transition: height 0.3s;
+      
+   }
+}
+      
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+     width: 12px;
+    height: 12px;
+    margin: -6px 0 0 -6px;
+    background: transparent;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 2px grey;
+    
+   &::after {
+     height: 100%;
+   }
+}
+
+@media screen and (max-width:1200px){
+    .s1{
+        .mytitle{
+            width: 80%;
+        }
+
+        .mytitle h1{
+            font-size: 4em;
+        }
+
+        .parallaximgone{
+           display: none;
+        }
+        .parallaximgtwo{
+            display: none;
+         }
+    }
+
+
+    .s2{
+        h1{          
+            font-size: 4em;
+            padding-top: 1rem;
+        }
+
+        .s2contenttwo .aboutme{
+            margin-top: -2rem;
+            display: block;
+        }
+        
+        .selfimg{
+            width: 100%;
+        }
+        .bio{
+            width: 100%;
+        }
+        .selfimg .imgbox{
+            width: 60%;
+        }
+        .bio p{
+            width: 60%;
+            font-size: 1em;
+        }
+    }
+
+    .s3{
+        .s3contenttwo{
+            width: 100%;
+        }
+        .s3contentone h1{
+            font-size: 4em;
+        }
+
+        .projectone .imgcontainer{
+            width: 30%;
+        }
+        .projectone .imgcontainer img{
+            width: 100%;
+    
+        }
+
+        .projectone .projectcontentone{
+            width: 70%;
+        }
+    }
+
+    .s4{
+        .s4contenttwo{
+            width: 100%;
+        }
+
+        .s4contentone h1{
+            font-size: 4em;
+        }
+
+        .projecttwo .imgcontainer{
+            width: 30%;
+        }
+        .projecttwo .imgcontainer img{
+            width: 100%;
+    
+        }
+
+        .projecttwo .projectcontenttwo{
+            width: 70%;
+        }
+    }
+
+    .s5{
+        .s5content .contactme{
+            display: block;
+            width: 90%;
+            margin: 1em auto; 
+        }
+
+
+        .s5contentone {
+            margin: 1em auto;
+            margin-top: 22em;;
+
+        }
+
+        .s5contenttwo{
+            width: 100%;
+           //border: 1px solid white;
+        }
+        .s5content .s5contenttwo .contactinfo{
+
+            margin-top: 2rem;
+            //border: 1px solid red;
+        }
+
+        
+    .s5content .s5contenttwo .contactinfo h1{
+        width: 95%;
+        font-size: 1.2em;
+        line-height: 1em;
+        text-align: center;
+    }
+    .s5content .s5contenttwo .contactinfo h2{
+        width: 95%;
+        font-size: 1em;
+        line-height: 1em;
+        text-align: center;
+    }
+    }
+}
+
+@media screen and (max-width:480px){
+    .s1{
+        .mytitle{
+            width: 90%;
+        }
+        h1{
+            margin-top: 2rem;
+        }
+    }
+
+    .s2{
+        h1{          
+            font-size: 2em;
+            padding-top: 2rem;
+        }
+
+        .s2contenttwo .aboutme{
+            margin-top: -5rem;
+        }
+
+    }
+
+    .s3{
+        .s3contenttwo .projectone{
+            display: block;
+        }
+        .s3contentone h1{
+            font-size: 2em;
+            padding-top: 1em;
+        }
+
+        .projectone .imgcontainer{
+            width: 40%;
+            margin: .2em auto;
+        }
+        .projectone .imgcontainer img{
+            width: 100%;
+    
+        }
+
+        .projectone .projectcontentone{
+            width: 100%;
+        }
+    }
+
+    .s4{
+        .s4contentone h1{
+            font-size: 2em;
+            padding-top: 1em;
+        }
+        .s4contenttwo .project .projecttwo{
+            display: block;
+        }
+
+        .projecttwo .imgcontainer{
+            width: 100%;
+    
+        }
+
+        .projecttwo .projectcontenttwo{
+            margin-top: 2em;
+            width: 100%;
+        }
+    }
+  
+
+}
